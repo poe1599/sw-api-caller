@@ -80,7 +80,7 @@ export default err => {
       err.message = '網路錯誤(502)'
       break
     case 503:
-      err.message = '服務不可用(503)'
+      err.message = Message || '服務不可用(503)'
       break
     case 504:
       err.message = '網路超時(504)'
