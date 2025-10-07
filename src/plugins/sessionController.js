@@ -1,8 +1,8 @@
 class SessionController {
   constructor(type) {
-    const { NODE_ENV, VITE_APP_KEY } = import.meta.env
+    const { VITE_USER_NODE_ENV, VITE_APP_KEY } = import.meta.env
     const typeArray = [`${VITE_APP_KEY}_SYSTEM`, `${VITE_APP_KEY}_USER`, `${VITE_APP_KEY}_SET`, `${VITE_APP_KEY}_STOR`]
-    this.env = NODE_ENV
+    this.env = VITE_USER_NODE_ENV 
     this.type = typeArray.includes(type) ? type : false
   }
 
