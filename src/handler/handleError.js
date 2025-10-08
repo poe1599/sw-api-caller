@@ -80,7 +80,7 @@ export default err => {
       err.message = '網路錯誤(502)'
       break
     case 503:
-      err.message = Message || '系統維護中，請稍後再試'
+      err.message = data?.Result?.Desc || Message || '系統維護中，請稍後再試'
       break
     case 504:
       err.message = '網路超時(504)'
